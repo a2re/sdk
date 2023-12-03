@@ -1,0 +1,16 @@
+name: Build
+
+on:
+  push:
+    branches-ignore:
+      - 'master'
+
+jobs:
+  build:
+    runs-on: centos:centos7
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: npm ci and npm run build:ci
+        run: |
+          ./build.sh
