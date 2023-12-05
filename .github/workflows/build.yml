@@ -6,7 +6,6 @@ jobs:
     runs-on: centos:centos7
     steps:
       - uses: actions/checkout@v1
-      - run: echo "Start building"
       - name: Build
       - run: |
           ./build.sh
